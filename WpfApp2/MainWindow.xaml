@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Width="300" VerticalAlignment="Top" Orientation="Vertical" Margin="0,30,0,0">
+            <TextBlock Text="Image to your URL" HorizontalAlignment="Center" FontSize="20"/>
+            <Image  Height="300" x:Name="imageWindow"/>
+            <Button Click="Button_Click" Height="30" Content="Encode Image"/>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="0,30,0,0" Width="300">
+            <TextBlock Text="Base64 code" HorizontalAlignment="Center" FontSize="20"/>
+            <TextBox Height="300" x:Name="txtBase64"/>
+            <Button Height="30" Content="Decode Image" Click="Button_Click_1"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Width="300" VerticalAlignment="Top" Orientation="Vertical" Margin="0,30,0,0">
+            <TextBlock Text="Image decode " HorizontalAlignment="Center" FontSize="20"/>
+            <Image Height="300" x:Name="imageDecode"/>
+        </StackPanel>
+    </Grid>
+</Window>
